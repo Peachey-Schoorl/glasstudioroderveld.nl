@@ -1,5 +1,15 @@
+---
+baseurl: /glasstudioroderveld.nl/
+url: https://peachey-schoorl.com
+
 defaults:
   - scope:
       path: "assets/img"
     values:
       image: true
+
+exclude:
+  - "vendor/"
+  - "Gemfile"
+  - "*.json"
+  - "*.lock"
