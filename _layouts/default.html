@@ -90,10 +90,86 @@
     window.Parameters.LayoutID[window._currentDevice] = 6;
     window.Parameters.LayoutVariationID = {};
     window.Parameters.LayoutVariationID[window._currentDevice] = 5;
-</script>
 
-<!-- render the required CSS and JS in the head section -->
-<script>
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+    rtCommonProps["facebook.accessToken"] = '126515034112906|8vv7JhnEegS8qz43fIOZjxGZReA';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["feature.flag.contactUsNewForm"] = 'true';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["rt.pushnotifs.force.button"] =true;
+    rtCommonProps["google.places.key"] = 'AIzaSyBAwUOqPUB1CU31yDztoZYaUE7sPv4ktEI';
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.opencage.token"] = '319e14f32bcce967ba55cd263478796d';
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] =false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["feature.flag.mappy.kml"] =false;
+    rtCommonProps["common.resources.dist.cdn"]=true;
+    rtCommonProps["common.build.dist.folder"]='production/2344';
+    rtCommonProps["common.resources.cdn.host"]='https://static.cdn-website.com';
+    rtCommonProps["common.resources.folder"]='https://static.cdn-website.com/mnlt/production/2344';
+    rtCommonProps["import.images.storage.useImageCDN"]=true;
+    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"]=true;
+    rtCommonProps["feature.flag.runtime.photoswipe.fix"]=true;
+    rtCommonProps["feature.flag.runtime.newAnimation.enabled"]=true;
+    rtCommonProps["feature.flag.runtime.newAnimation.respectCssAnimationProps.enabled"]=true;
+    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"]=true;
+    rtCommonProps["feature.flag.sites.google.analytics.gtag"]=true;
+    
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'here';
+    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+    rtCommonProps['common.map.defaults.strokeSize'] = '2';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['editor.infra.noPrefixedChanges'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+    rtCommonProps['feature.flag.mark.anchors'] = true;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"] =160;
+    rtCommonProps["images.sizes.mobile"] =640;
+    rtCommonProps["images.sizes.tablet"] =1280;
+    rtCommonProps["images.sizes.desktop"] =1920;
+    rtCommonProps["modules.resources.cdn"] =true;
+    rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
+    rtCommonProps["facebook.api.version"] = '7.0';
+    rtCommonProps["runtime.save.restore.function.bind"] =true;
+    rtCommonProps["feature.flag.photo.gallery.exact.size"] =false;
+    rtCommonProps["feature.flag.photo.gallery.lazy"] =true;
+    rtCommonProps["store.handleItemId.enabled"] =true;
+    rtCommonProps["new.store.fix.ecwid.back.bug"] =true;
+    rtCommonProps["new.store.accountPage.ecwid.signIn.fix"] =true;
+    rtCommonProps["fix.ecwid.sign.in.page.with.return.url"] =true;
+    rtCommonProps["site.runtime.video.background.ssr"] =true;
+    rtCommonProps["membership.dmApi.getLoggedInMember.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.asyncInit.enabled"] =false;
+
+    Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
+    Parameters.NavigationAreaParams.LessButtonText = 'LESS';
+    Parameters.HomeLinkText = 'Home';
+
+    var isWLR = true;
+
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    window.collections = {};
+    window.currentLanguage = "ENGLISH"
+
+    window.cookiesNotificationMarkupPreview = 'null';
+
     window.SystemID = 'US_DIRECT_PRODUCTION';
 
     if(!window.dmAPI) {
@@ -110,26 +186,6 @@
             setTimeout(fn, 0);
         }
     }
-
-    function loadCSS(link) {
-        try {
-            var urlParams = new URLSearchParams(window.location.search);
-            var noCSS = !!urlParams.get('nocss');
-            var cssTimeout = urlParams.get('cssTimeout') || 0;
-
-            if (noCSS) {
-                return;
-            }
-            requestIdleCallback(function () {
-                window.setTimeout(function () {
-                    link.onload = null;
-                    link.rel = 'stylesheet';
-                    link.type = 'text/css'
-                }, parseInt(cssTimeout, 10));
-            });
-        } catch (e) {/* Never fail - this is just a tool for measurements */}
-    }
-
 </script>
 <style>
     /*forceCssIncludes*/
@@ -274,33 +330,14 @@
   </div>
 </div>
 
-<link rel="preload" href="https://irp.cdn-website.com/fonts/css?family=Roboto:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Montserrat:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Source+sans+pro:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Poppins:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|ABeeZee:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Open+Sans:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Source+Sans+Pro:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic&amp;subset=latin-ext&amp;display=swap"  as="style" importance="low" onload="loadCSS(this)" />
+<link rel="stylesheet" href="https://irp.cdn-website.com/fonts/css?family=Roboto:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Montserrat:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Source+sans+pro:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Poppins:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|ABeeZee:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Open+Sans:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Source+Sans+Pro:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic&amp;subset=latin-ext&amp;display=swap" />
+<link rel="stylesheet" href="https://static.cdn-website.com/mnlt/production/2344/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-new.min.css" />
+<link rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/production_2344/3831b7724e0a7739cc3eef7930526195.css" />
+<link rel="stylesheet" href="https://irp.cdn-website.com/36e9f765/files/36e9f765_1.min.css?v=19" id="siteGlobalCss" />
+<link rel="stylesheet" href="https://irp.cdn-website.com/36e9f765/files/36e9f765_home_1.min.css?v=19" id="homeCssLink" />
 
-<!-- RT CSS Include d-css-runtime-desktop-one-package-new-->
-<link rel="preload" as="style" importance="low" onload="loadCSS(this)" href="https://static.cdn-website.com/mnlt/production/2344/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-new.min.css" />
-
-<!-- End of RT CSS Include -->
- <link rel="preload" href="https://irp.cdn-website.com/WIDGET_CSS/production_2344/3831b7724e0a7739cc3eef7930526195.css" id="widgetCSS" as="style" importance="low" onload="loadCSS(this)" />
-
-<!-- This is populated in Ajax navigation -->
-<style id="pageAdditionalWidgetsCss" type="text/css"></style>
-
-<!-- Site CSS -->
-<link rel="preload" href="https://irp.cdn-website.com/36e9f765/files/36e9f765_1.min.css?v=19" id="siteGlobalCss" as="style" importance="low" onload="loadCSS(this)" />
-
-<!-- Page CSS -->
-<link rel="preload" href="https://irp.cdn-website.com/36e9f765/files/36e9f765_home_1.min.css?v=19" id="homeCssLink" as="style" importance="low" onload="loadCSS(this)" />
-
-<script>
-    var isWLR = true;
-
-    window.customWidgetsFunctions = {};
-    window.customWidgetsStrings = {};
-    window.collections = {};
-    window.currentLanguage = "ENGLISH"
-</script>
-
-<script type="text/javascript" src="https://static.cdn-website.com/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://static.cdn-website.com/mnlt/production/2344/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js" ></script>
 
 <script>
     var jquery = window.$;
@@ -312,91 +349,22 @@
             console.warn("Trying to over-write the global jquery object!");
         }
     });
-</script>
-<script>
-    window.cookiesNotificationMarkupPreview = 'null';
-</script>
-<!-- HEAD RT JS Include -->
-<script>
-    window.INSITE = window.INSITE || {};
-    window.INSITE.device = "desktop";
-    window.rtCommonProps = {};
-    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
-    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
-    rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
-    rtCommonProps["facebook.accessToken"] = '126515034112906|8vv7JhnEegS8qz43fIOZjxGZReA';
-    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
-    rtCommonProps["feature.flag.contactUsNewForm"] = 'true';
-    rtCommonProps["inlineEditGrid.snap"] =true;
-    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
-    rtCommonProps["rt.pushnotifs.force.button"] =true;
-    rtCommonProps["google.places.key"] = 'AIzaSyBAwUOqPUB1CU31yDztoZYaUE7sPv4ktEI';
-    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
-    rtCommonProps["common.mapbox.js.override"] =false;
-    rtCommonProps["common.opencage.token"] = '319e14f32bcce967ba55cd263478796d';
-    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
-    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
-    rtCommonProps["isCoverage.test"] =false;
-    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
-    rtCommonProps["feature.flag.mappy.kml"] =false;
-    rtCommonProps["common.resources.dist.cdn"]=true;
-    rtCommonProps["common.build.dist.folder"]='production/2344';
-    rtCommonProps["common.resources.cdn.host"]='https://static.cdn-website.com';
-    rtCommonProps["common.resources.folder"]='https://static.cdn-website.com/mnlt/production/2344';
-    rtCommonProps["import.images.storage.useImageCDN"]=true;
-    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"]=true;
-    rtCommonProps["feature.flag.runtime.photoswipe.fix"]=true;
-    rtCommonProps["feature.flag.runtime.newAnimation.enabled"]=true;
-    rtCommonProps["feature.flag.runtime.newAnimation.respectCssAnimationProps.enabled"]=true;
-    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"]=true;
-    rtCommonProps["feature.flag.sites.google.analytics.gtag"]=true;
-    
-    rtCommonProps['common.mapsProvider'] = 'mapbox';
-    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
-    rtCommonProps['common.geocodeProvider'] = 'here';
-    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
-    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
-    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
-    rtCommonProps['common.map.defaults.strokeSize'] = '2';
-    rtCommonProps['server.for.resources'] = '';
-    rtCommonProps['feature.flag.lazy.widgets'] = true;
-    rtCommonProps['editor.infra.noPrefixedChanges'] = true;
-    rtCommonProps['feature.flag.single.wow'] = false;
-    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
-    rtCommonProps['feature.flag.mark.anchors'] = true;
-    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
-    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
-    rtCommonProps["images.sizes.small"] =160;
-    rtCommonProps["images.sizes.mobile"] =640;
-    rtCommonProps["images.sizes.tablet"] =1280;
-    rtCommonProps["images.sizes.desktop"] =1920;
-    rtCommonProps["modules.resources.cdn"] =true;
-    rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
-    rtCommonProps["facebook.api.version"] = '7.0';
-    rtCommonProps["runtime.save.restore.function.bind"] =true;
-    rtCommonProps["feature.flag.photo.gallery.exact.size"] =false;
-    rtCommonProps["feature.flag.photo.gallery.lazy"] =true;
-    rtCommonProps["store.handleItemId.enabled"] =true;
-    rtCommonProps["new.store.fix.ecwid.back.bug"] =true;
-    rtCommonProps["new.store.accountPage.ecwid.signIn.fix"] =true;
-    rtCommonProps["fix.ecwid.sign.in.page.with.return.url"] =true;
-    rtCommonProps["site.runtime.video.background.ssr"] =true;
-    rtCommonProps["membership.dmApi.getLoggedInMember.enabled"] =true;
-    rtCommonProps["feature.flag.runtime.newAnimation.asyncInit.enabled"] =false;
-</script>
-<script src="https://static.cdn-website.com/mnlt/production/2344/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js" ></script>
-<!-- End of HEAD RT JS Include -->
-<script>jQuery.DM.updateWidthAndHeight();
-$(window).bind("orientationchange", function (e) {
-    $.layoutManager.initLayout();
-    
-});
+
+    jQuery.DM.updateWidthAndHeight();
+    $(window).bind("orientationchange", function (e) {
+        $.layoutManager.initLayout();
+    });
+
+    jQuery(window).on('load', function () {
+        try {
+            jQuery.DM.updateIOSHeight();
+        } catch (e) {
+        }
+
+    });
 </script>
 
 <!-- photoswipe markup -->
-
-
-
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
     <!-- Background of PhotoSwipe. It's a separate element as animating opacity is faster than rgba(). -->
@@ -455,34 +423,9 @@ $(window).bind("orientationchange", function (e) {
 	<div class="data"></div>
 </div>
   
-<script id="d_track_personalization">
-// Collects client data and updates cookies used by smart sites
-var expireDays = 365,visitLength = 30 * 60000;
-$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), expireDays);
-function setSmartSiteCookies() {
-	setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
-}
-$.DM.events.on("afterAjax", setSmartSiteCookies);
-setSmartSiteCookies();
-</script>
-<script type="text/javascript">    
-    Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
-    Parameters.NavigationAreaParams.LessButtonText = 'LESS';
-    Parameters.HomeLinkText = 'Home';
-</script>
-
-<script>
-    jQuery(window).on('load', function () {
-        try {
-            jQuery.DM.updateIOSHeight();
-        } catch (e) {
-        }
-
-    });
-</script>
 <script>
     dmAPI.loadScript(
-        window.rtCommonProps['common.resources.cdn.host'] + '/libs/lozad/1.15.0/lozad.min.js',
+        'https://static.cdn-website.com/libs/lozad/1.15.0/lozad.min.js',
         function () {
             dmAPI.runOnReady('lozadInit', function () {
                 window.document.querySelectorAll('img.lazy').forEach(function (img) {
