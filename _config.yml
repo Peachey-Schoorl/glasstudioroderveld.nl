@@ -1,9 +1,10 @@
 ---
-baseurl: /
-url: https://glasstudioroderveld.nl
-title: Glas Studio Roderveld
 author: Niek Schoorl
+baseurl: /
+description: Creaties in glas door Niek Schoorl
 locale: nl
+title: Glas Studio Roderveld
+url: https://glasstudioroderveld.nl
 
 defaults:
   - scope:
