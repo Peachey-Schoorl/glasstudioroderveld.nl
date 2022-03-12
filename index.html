@@ -244,57 +244,22 @@
                                   <div class="u_1869570009 dmPhotoGallery newPhotoGallery dmPhotoGalleryResp hasShadow" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="square" data-desktop-columns="4" data-element-type="dPhotoGalleryId" data-desktop-text-layout="bottom" id="1869570009" data-desktop-caption-alignment="bottom_center" data-placeholder="false" data-image-hover-effect="shine" data-rows-to-show="4" data-mobile-columns="1" data-image-animation="zoomIn" data-tablet-columns="2">
 
                                     <ul class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1658372707">
-                                      
+{% assign images = site.static_files | where: "image", true %}
+{% for image in images %}
                                       <li class="photoGalleryThumbs">
                                         <div class="image-container">
-                                          <a data-dm-multisize-attr="href" data-image-url="https://irp-cdn.multiscreensite.com/36e9f765/dms3rep/multi/CAE343BF-90E1-49D3-A22E-0966BA35808F-424a9601.jpeg">
-                                            <img data-src="https://lirp.cdn-website.com/36e9f765/dms3rep/multi/opt/CAE343BF-90E1-49D3-A22E-0966BA35808F-424a9601-1920w.jpeg" onerror="handleImageLoadError(this)" />
+                                          <a data-dm-multisize-attr="href" data-image-url="{{ image.path }}">
+                                            <img data-src="{{ image.path }}" onerror="handleImageLoadError(this)" />
                                           </a>
                                         </div>
                                         <div class="caption-container">
                                           <span class="caption-inner">
-                                            <h3 class="caption-title">NS Monotype #200131</h3> 
+                                            <h3 class="caption-title">{{ image.path | remove: ".jpeg" | remove: ".jpg" | remove: ".png" | capitalize }}</h3> 
                                             <div class="caption-text"></div>
                                           </span>
                                         </div>
                                       </li>
-
-                                      <li class="photoGalleryThumbs" id="1779690155">
-                                        <div class="image-container" id="1896598321"> <a data-dm-multisize-attr="href" data-image-url="https://irp-cdn.multiscreensite.com/36e9f765/dms3rep/multi/E480394D-20A9-4D74-901F-ACEB3A9B9EE1.jpeg" id="1182721386"><img irh="" irw="" data-src="https://lirp.cdn-website.com/36e9f765/dms3rep/multi/opt/E480394D-20A9-4D74-901F-ACEB3A9B9EE1-1920w.jpeg" id="1813264229" onerror="handleImageLoadError(this)" /></a>
-                                        </div>
-                                        <div class="caption-container u_1271662223" style="display:none" id="1271662223"> <span class="caption-inner" id="1760270319"> <h3 class="caption-title u_1375843235" id="1375843235">NS Monotype #202014</h3> 
- <div class="caption-text u_1157548547" id="1157548547"></div> 
- <a class="caption-button dmWidget clearfix u_1866949027" id="1866949027"> <span class="iconBg" id="1257373149"> <span class="icon hasFontIcon icon-star" id="1221759127"></span>
-                                          </span>
-                                          <span class="text" id="1061117766">Button</span>
-                                          </a>
-                                          </span>
-                                        </div>
-                                      </li>
-                                      <li class="photoGalleryThumbs" id="1464347029">
-                                        <div class="image-container" id="1030030158"> <a data-dm-multisize-attr="href" data-image-url="https://irp-cdn.multiscreensite.com/36e9f765/dms3rep/multi/3390DB8E-A6F0-47A9-9489-8709B35BECC7-760b00d4.jpeg" id="1683836100" class="u_1683836100"><img irh="" irw="" data-src="https://lirp.cdn-website.com/36e9f765/dms3rep/multi/opt/3390DB8E-A6F0-47A9-9489-8709B35BECC7-760b00d4-1920w.jpeg" id="1034904941" class="" onerror="handleImageLoadError(this)" /></a>
-                                        </div>
-                                        <div class="caption-container u_1012977762" style="display:none" id="1012977762"> <span class="caption-inner" id="1777750498"> <h3 class="caption-title u_1506828557" id="1506828557">NS Monotype #191223</h3> 
- <div class="caption-text u_1210102786" id="1210102786"></div> 
- <a class="caption-button dmWidget clearfix u_1157464866" id="1157464866"> <span class="iconBg" id="1642188788"> <span class="icon hasFontIcon icon-star" id="1179267543"></span>
-                                          </span>
-                                          <span class="text" id="1388398788">Button</span>
-                                          </a>
-                                          </span>
-                                        </div>
-                                      </li>
-                                      <li class="photoGalleryThumbs" id="1588063840">
-                                        <div class="image-container" id="1348824856"> <a data-dm-multisize-attr="href" data-image-url="https://irp-cdn.multiscreensite.com/36e9f765/dms3rep/multi/0C98025C-527F-4F5D-A7FA-66BAF5A436C9.jpeg" id="1109558635"><img irh="" irw="" data-src="https://lirp.cdn-website.com/36e9f765/dms3rep/multi/opt/0C98025C-527F-4F5D-A7FA-66BAF5A436C9-1920w.jpeg" id="1222855778" onerror="handleImageLoadError(this)" /></a>
-                                        </div>
-                                        <div class="caption-container u_1285572930" style="display:none" id="1285572930"> <span class="caption-inner" id="1901148267"> <h3 class="caption-title u_1801979217" id="1801979217">NS Monotype #191123</h3> 
- <div class="caption-text u_1353948884" id="1353948884"></div> 
- <a class="caption-button dmWidget clearfix u_1592831363" id="1592831363"> <span class="iconBg" id="1384225120"> <span class="icon hasFontIcon icon-star" id="1503876101"></span>
-                                          </span>
-                                          <span class="text" id="1791692540">Button</span>
-                                          </a>
-                                          </span>
-                                        </div>
-                                      </li>
+{% endfor %}
                                     </ul>
                                     <div class="photoGalleryViewAll link" isall="true" data-viewall="View more" data-viewless="View less" style="display:none;" id="1506348693"></div>
                                   </div>
