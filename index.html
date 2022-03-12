@@ -224,6 +224,7 @@
                                     <ul class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1658372707">
 {% assign images = site.static_files | where: "image", true %}
 {% for image in images %}
+    {%- assign image_name = image.path | split: "/" | last | downcase | remove: ".jpeg" | remove: ".jpg" | remove: ".png" | capitalize -%}
                                       <li class="photoGalleryThumbs">
                                         <div class="image-container">
                                           <a data-dm-multisize-attr="href" data-image-url="{{ image.path | relative_url }}">
@@ -232,7 +233,7 @@
                                         </div>
                                         <div class="caption-container">
                                           <span class="caption-inner">
-                                            <h3 class="caption-title">{{ image.path | downcase | remove: ".jpeg" | remove: ".jpg" | remove: ".png" | capitalize }}</h3> 
+                                            <h3 class="caption-title">{{ image_name }}</h3> 
                                             <div class="caption-text"></div>
                                           </span>
                                         </div>
