@@ -1,7 +1,9 @@
 ---
-baseurl: /glasstudioroderveld.nl/
-url: https://peachey-schoorl.com
+baseurl: /
+url: https://glasstudioroderveld.nl
 title: Glas Studio Roderveld
+author: Niek Schoorl
+locale: nl
 
 defaults:
   - scope:
@@ -10,7 +12,5 @@ defaults:
       image: true
 
 exclude:
-  - "vendor/"
   - "Gemfile"
-  - "*.json"
-  - "*.lock"
+  
