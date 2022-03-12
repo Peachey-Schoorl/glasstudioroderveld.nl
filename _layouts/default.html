@@ -374,7 +374,6 @@
         }
     });
 
-    jQuery.DM.updateWidthAndHeight();
     $(window).bind("orientationchange", function (e) {
         $.layoutManager.initLayout();
     });
@@ -382,9 +381,11 @@
     jQuery(window).on('load', function () {
         try {
             jQuery.DM.updateIOSHeight();
-        } catch (e) {
-        }
+        } catch (e) {}
 
+        try {
+            jQuery.DM.updateWidthAndHeight();
+        } catch (e) {}
     });
 
     dmAPI.loadScript(
