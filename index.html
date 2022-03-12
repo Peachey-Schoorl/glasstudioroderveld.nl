@@ -255,7 +255,7 @@
                                         </div>
                                         <div class="caption-container">
                                           <span class="caption-inner">
-                                            <h3 class="caption-title">{{ image.path | remove: ".jpeg" | remove: ".jpg" | remove: ".png" | capitalize }}</h3> 
+                                            <h3 class="caption-title">{{ image.path | downcase | remove: ".jpeg" | remove: ".jpg" | remove: ".png" | capitalize }}</h3> 
                                             <div class="caption-text"></div>
                                           </span>
                                         </div>
