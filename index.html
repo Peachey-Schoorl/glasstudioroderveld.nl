@@ -249,8 +249,8 @@
 {% for image in images %}
                                       <li class="photoGalleryThumbs">
                                         <div class="image-container">
-                                          <a data-dm-multisize-attr="href" data-image-url="{{ image.path }}">
-                                            <img data-src="{{ image.path }}" onerror="handleImageLoadError(this)" />
+                                          <a data-dm-multisize-attr="href" data-image-url="{{ image.path | relative_url }}">
+                                            <img data-src="{{ image.path  | relative_url }}" onerror="handleImageLoadError(this)" />
                                           </a>
                                         </div>
                                         <div class="caption-container">
